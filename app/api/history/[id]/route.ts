@@ -2,10 +2,11 @@ import { NextRequest, NextResponse } from "next/server";
 import { auth } from "@clerk/nextjs/server";
 import { db } from "@/lib/db";
 
-export async function DELETE(
-  request: NextRequest,
-  context: { params: Promise<{ id: string }> },
-) {
+type RouteContext = {
+  params: Promise<{ id: string }>;
+};
+
+export async function DELETE(request: NextRequest, context: RouteContext) {
   try {
     const authObj = await auth();
     const userId = authObj.userId;
@@ -15,6 +16,10 @@ export async function DELETE(
     }
 
     const { id } = await context.params;
+
+    if (!id) {
+      return new NextResponse("Bad Request: Missing ID", { status: 400 });
+    }
 
     await db.generatedContent.delete({
       where: {
