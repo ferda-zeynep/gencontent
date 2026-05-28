@@ -6,7 +6,7 @@ All generated outputs are processed via cutting-edge Google AI Studio models and
 
 ## 🚀 Live Demo
 
-[Explore the Active GenContent SaaS MVP Application Platform](https://gencontent-sand.vercel.app)
+https://gencontent-sand.vercel.app
 
 ## ✨ Key Features
 
