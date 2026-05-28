@@ -6,7 +6,7 @@ All generated outputs are processed via cutting-edge Google AI Studio models and
 
 ## 🚀 Live Demo
 
-The application is currently being packaged for cloud delivery. The active deployment link will be attached below immediately following the Vercel production build step.
+[Explore the Active GenContent SaaS MVP Application Platform](https://gencontent-sand.vercel.app)
 
 ## ✨ Key Features
 
