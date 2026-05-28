@@ -1,0 +1,44 @@
+datasource db {
+  provider = "postgresql"
+  url      = env("DATABASE_URL")
+}
+
+generator client {
+  provider = "prisma-client-js"
+}
+
+model User {
+  id        String             @id
+  email     String             @unique
+  name      String?
+  createdAt DateTime           @default(now())
+  updatedAt DateTime           @updatedAt
+  contents  GeneratedContent[]
+}
+
+model GeneratedContent {
+  id          String   @id @default(cuid())
+  userId      String
+  user        User     @relation(fields: [userId], references: [id], onDelete: Cascade)
+  title       String
+  prompt      String
+  response    String
+  contentType String
+  tone        String
+  language    String
+  isFavorite  Boolean  @default(false)
+  createdAt   DateTime @default(now())
+  updatedAt   DateTime @updatedAt
+
+  @@index([userId])
+}
+
+model Template {
+  id          String   @id @default(cuid())
+  name        String
+  description String
+  prompt      String
+  category    String
+  slug        String   @unique
+  createdAt   DateTime @default(now())
+}
