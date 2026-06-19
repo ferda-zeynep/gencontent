@@ -87,9 +87,12 @@ export default function GeneratePage() {
               onChange={(e) => setContentType(e.target.value)}
               className="w-full p-3 border border-gray-200 rounded-lg outline-none bg-white text-gray-700 focus:ring-2 focus:ring-blue-500 transition"
             >
-              <option value="linkedin">LinkedIn Post</option>
-              <option value="tweet">Twitter Thread</option>
-              <option value="blog">Blog Article</option>
+              <option value="linkedin">LinkedIn Post 💼</option>
+              <option value="tweet">Twitter Thread 🐦</option>
+              <option value="blog">Blog Article 📝</option>
+              <option value="instagram">Instagram Post 📸</option>
+              <option value="tiktok">TikTok Script 🎬</option>
+              <option value="facebook">Facebook Post 👥</option>
             </select>
           </div>
 
@@ -117,8 +120,11 @@ export default function GeneratePage() {
               onChange={(e) => setLanguage(e.target.value)}
               className="w-full p-3 border border-gray-200 rounded-lg outline-none bg-white text-gray-700 focus:ring-2 focus:ring-blue-500 transition"
             >
-              <option value="en">English</option>
-              <option value="tr">Turkish</option>
+              <option value="en">English 🇺🇸</option>
+              <option value="tr">Turkish 🇹🇷</option>
+              <option value="es">Spanish 🇪🇸</option>
+              <option value="de">German 🇩🇪</option>
+              <option value="fr">French 🇫🇷</option>
             </select>
           </div>
         </div>
